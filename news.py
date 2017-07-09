@@ -13,9 +13,9 @@ def news():
     # open with GET method
     resp = requests.get(url)
 
-    # http_respone 200 means OK status
+    # http_response 200 means OK status
     if resp.status_code == 200:
-        print("Successfully opened the web page")
+        print("Successfully Scrapped")
         print("The news is as follow :-\n")
 
         # we need a parser,Python built-in HTML parser is enough .
@@ -38,6 +38,6 @@ def news():
 news_found = news()
 language = 'en'
 myobj = gTTS(text=news_found, lang=language, slow=False)
-myobj.save("welcome.mp3")
-os.system("welcome.mp3")
+myobj.save("news.mp3")
+os.system("news.mp3")
 
